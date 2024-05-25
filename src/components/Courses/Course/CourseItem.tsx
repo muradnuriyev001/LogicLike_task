@@ -1,5 +1,9 @@
+import { Course } from "../../../interfaces/interface";
 import c from "./CourseItem.module.scss";
-const Course = ({ name, image, bgColor }) => {
+
+type Props = Omit<Course, "id" & "tags">;
+
+const CourseItem = ({ name, image, bgColor }: Props) => {
   return (
     <div className={c.course_item}>
       <div className={c.image} style={{ backgroundColor: bgColor }}>
@@ -12,4 +16,4 @@ const Course = ({ name, image, bgColor }) => {
   );
 };
 
-export default Course;
+export default CourseItem;

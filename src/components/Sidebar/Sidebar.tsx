@@ -1,10 +1,15 @@
 import useFetch from "../../hooks/useFetch";
 import c from "./Sidebar.module.scss";
 
-const Sidebar = ({ activeTag, setActiveTag }) => {
+interface Props {
+  activeTag: string;
+  setActiveTag: (arg: string) => void;
+}
+
+const Sidebar = ({ activeTag, setActiveTag }: Props) => {
   const { data } = useFetch("https://logiclike.com/docs/courses.json");
 
-  let tags = [];
+  let tags: string[] = [];
 
   // Check if data exists and is an array
   if (Array.isArray(data)) {
@@ -18,14 +23,14 @@ const Sidebar = ({ activeTag, setActiveTag }) => {
       <div className={c.content}>
         <ul>
           <li
-            className={activeTag === "All" ? c.active : null}
+            className={activeTag === "All" ? c.active : ""}
             onClick={() => setActiveTag("All")}
           >
             Все темы
           </li>
           {tags.map((tag, i) => (
             <li
-              className={activeTag === tag ? c.active : null}
+              className={activeTag === tag ? c.active : ""}
               key={i}
               onClick={() => setActiveTag(tag)}
             >

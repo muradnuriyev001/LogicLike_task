@@ -2,7 +2,7 @@ import c from "./Courses.module.scss";
 import useFetch from "../../hooks/useFetch";
 import CourseItem from "./Course/CourseItem";
 
-const Courses = ({ activeTag }) => {
+const Courses = ({ activeTag }: { activeTag: string }) => {
   const { data, loading } = useFetch("https://logiclike.com/docs/courses.json");
   return (
     <div className={c.courses}>
