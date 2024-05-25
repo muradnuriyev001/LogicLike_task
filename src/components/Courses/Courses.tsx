@@ -6,10 +6,13 @@ const Courses = ({ activeTag }: { activeTag: string }) => {
   const { data, loading } = useFetch("https://logiclike.com/docs/courses.json");
   return (
     <div className={c.courses}>
-      {!(data === null || loading) &&
-        data
-          .filter(({ tags }) => tags.includes(activeTag) || activeTag === "All")
-          .map((course) => <CourseItem key={course.id} {...course} />)}
+      {data === null || loading
+        ? "Loading..."
+        : data
+            .filter(
+              ({ tags }) => tags.includes(activeTag) || activeTag === "All"
+            )
+            .map((course) => <CourseItem key={course.id} {...course} />)}
     </div>
   );
 };

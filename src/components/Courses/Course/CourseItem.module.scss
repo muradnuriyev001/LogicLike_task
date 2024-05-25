@@ -18,8 +18,9 @@
   .image {
     width: 100%;
     height: 162px;
-    display: grid;
-    place-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     img {
       width: 144px;
       height: 144px;

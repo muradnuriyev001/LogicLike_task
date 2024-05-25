@@ -3,8 +3,9 @@
   place-content: center;
   grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
+  gap: 18px;
   margin-left: 18px;
-  gap: 24px;
+  align-self: start;
 }
 
 @media only screen and (max-width: 800px) {
@@ -13,10 +14,15 @@
   }
 }
 
-
 @media only screen and (max-width: 600px) {
-    .courses {
-      grid-template-columns: 1fr;
-    }
+  .courses {
+    grid-template-columns: 1fr;
   }
-  
+}
+
+@media only screen and (max-width: 500px) {
+  .courses {
+    margin-left: 0px;
+    margin-top: 18px;
+  }
+}
