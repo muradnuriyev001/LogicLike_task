@@ -1,11 +1,15 @@
-*{
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Nunito;
 }
 
 :root {
-  --green: #5FBF77;
-  --white: #CFCFE4;
-  --black: #39414B;
+  --green: #5fbf77;
+  --white: #cfcfe4;
+  --black: #39414b;
+  --gray: #cfcfe4;
 }
