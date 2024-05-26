@@ -13,20 +13,18 @@
 }
 
 @media only screen and (max-width: 800px) {
-  .courses {
+  .courses_container {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .courses {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 680px) {
   .courses {
     margin-left: 0px;
     margin-top: 18px;
   }
+  .courses_container {
+    grid-template-columns: 1fr;
+  }
 }
+
